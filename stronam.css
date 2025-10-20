@@ -1,0 +1,620 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+.spac{
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+.menu {
+  top: 0px;
+  background-color: #efe7e4;
+    height: 100%;
+    min-height: 15vh;
+  display: flex;
+      flex-wrap: wrap;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    justify-content: center;
+
+
+}
+main{
+background-color: #ffffff;}
+
+.p {
+    margin-left: 5%;
+}
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-300px); /* zaczyna poza ekranem z lewej */
+    opacity: 0;                    /* niewidoczny */
+  }
+  to {
+    transform: translateX(0);      /* kończy na miejscu */
+    opacity: 1;                    /* staje się widoczny */
+  }
+}
+
+
+@keyframes Animacia2 {
+  from {
+    transform: translateY(60px); /* zaczyna poza ekranem z lewej */
+    opacity: 0;                    /* niewidoczny */
+  }
+  to {
+    transform: translateY(0);      /* kończy na miejscu */
+    opacity: 1;                    /* staje się widoczny */
+  }
+}
+
+
+@keyframes Animacia3 {
+  from {
+    transform: translateY(15px); /* zaczyna poza ekranem z lewej */
+    opacity: 0;                    /* niewidoczny */
+  }
+  to {
+    transform: translateY(0);      /* kończy na miejscu */
+    opacity: 1;                    /* staje się widoczny */
+  }
+}
+
+.imie {
+    justify-content: left;
+    align-items: center;
+    justify-items: left;
+    transition: transform 0.2s ease;
+    font-size: clamp(16px, 5vw, 50px);
+    width: 30%;
+    color: rgb(0, 0, 0);
+    height: auto; 
+  padding-right: 200px;
+}
+.imie:hover{
+  transform: scale(110%);
+}
+.kty {
+  margin-right:5%;
+  text-decoration: none;
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-color: #efe7e4;
+  width: auto;
+  max-width: 100%;
+
+}
+
+
+@media (max-width: 600px) {
+  .kty {
+    display: flex;
+  text-decoration: none;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-color: #efe7e4;
+  width: auto;
+  max-width: 100%;
+  }
+}
+
+
+.centrum {
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+    animation: Animacia2 1.5s ease-out forwards;
+    margin-top: 4%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+  
+}
+
+
+
+.content {
+    padding-right: 5%;
+    width: 50%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+.content {
+  justify-content: center;
+    padding-right: 5%;
+    width: 70%;
+    height: auto;
+}
+}
+@media (max-width: 600px) {
+  .centrum {
+    margin-left: 5%;
+    justify-content: left;
+    padding-right: 5%;
+    width: 130%;
+    height: auto;
+  }
+}
+
+
+.bold {
+  font-weight: bold;
+}
+
+.nagl{
+  color: rgb(0, 0, 0);
+  font-size: clamp(40px, 5vw, 100px);
+}
+.ppp{
+  margin-top: 40PX;
+    line-height: 50px;
+    color: rgb(0, 0, 0);
+  font-size: clamp(16px, 5vw, 25px);
+    
+}
+.TRES{
+  padding: 2%;
+  margin-top: 15%;
+    background-color: #efe7e4;
+  height: auto;
+    display: flex;
+    flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+}
+.obraz {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    justify-items: center;
+    width: auto;
+    height: auto;
+}
+.zapu{
+    width: 10%;
+}
+.ing {
+  
+  display: flex;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    transition: border-radius 0.4s ease;
+
+    /* Gradient + obraz */
+    background-image:
+        url(/Users/dawid/Desktop/stronaM/1000002076.jpg);
+    background-position: -90px;
+    background-size: 1200px auto;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay; /* można zmieniać np. overlay, multiply, screen */  
+}
+
+@media (max-width: 600px) {
+  .obraz {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    justify-items: center;
+    width: auto;
+    height: auto; 
+  }
+}
+
+@media (max-width: 600px) {
+  .ing {
+  display: flex;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transition: border-radius 0.4s ease;
+
+    /* Gradient + obraz */
+    background-image:
+        url(/Users/dawid/Desktop/stronaM/1000002076.jpg);
+    background-position: -90px;
+    background-size: 600px auto;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay; /* można zmieniać np. overlay, multiply, screen */  
+  }
+}
+.ing:hover{
+
+    width: 600px;
+    height: 600px;
+        background-image: 
+        url(/Users/dawid/Desktop/stronaM/1000002076.jpg);
+    background-position: -90px;
+    background-size: 1200px auto;
+    border-radius: 2%;
+}
+
+a{
+    text-decoration: none;
+    text-decoration-color: #000000;
+}
+.a0{
+    text-decoration: none;
+    text-decoration-color: #000000;
+
+  border-radius: 24px; /* zaokrąglone rogi */
+  color: rgb(0, 0, 0);
+    animation: Animacia3 1.5s ease-out forwards;
+    font-size: 150%; /*20px*/
+    transition: transform 0.3s ease;
+    padding: 7px;
+}
+
+
+
+@media (max-width: 600px) {
+  .a0 {
+    text-decoration: none;
+    text-decoration-color: #000000;
+  border-radius: 24px; /* zaokrąglone rogi */
+  color: rgb(0, 0, 0);
+    animation: Animacia3 1.5s ease-out forwards;
+    font-size: 100%; /*20px*/
+    transition: transform 0.3s ease;
+    padding: 7px;
+  }
+}
+
+
+.a0:hover{
+
+   background-color: #edddd7;
+   color: rgb(0, 0, 0);
+}
+.a0:active{
+  background-color: #bbaca2;
+}
+.a0 .activ{
+  background-color: #91562b;
+}
+
+
+.p1{    
+    animation: slideFromLeft 1.2s ease-out forwards;
+    margin-top: 1%;
+}
+
+.div11{
+  padding: 2%;
+  text-align: justify;
+    align-items: center;
+  justify-content: center;
+  padding: 1%;
+  background: linear-gradient(to top,  #efe7e4, #b7988d, #b7988d, #b7988d, #b7988d, #b7988d, #b7988d);
+  height: 800px;
+  flex: 1 1 300px; /* elastyczna szerokość */
+  border-radius: 20px 20px 0 0;
+  transition: transform 0.5s ease;
+}
+.div11:hover{
+  transform:scale(114%)
+
+}
+.podnag{
+  padding: 1%;
+    color: rgb(255, 255, 255);
+  align-items: center;
+  justify-content: center;
+  font-size: 300%;
+  margin-bottom: 10%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.podp{
+  color: aliceblue;
+    text-align: justify;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+.centrum2 {
+  display: flex;   
+  gap: 10px;              /* ustawiamy flex dla całego kontenera */ /* tekst i flaga po bokach */
+  align-items: center;            /* pionowe wyśrodkowanie */
+  margin-right: 5%;
+  margin-left: 5%;
+  padding: 20px;                 /* odstęp wewnętrzny */
+margin-bottom: 30px;
+}
+
+.content2 {
+  width: 50%;                     /* tekst zajmuje 55% szerokości */
+  color: rgb(0, 0, 0);
+  text-align: left;
+}
+
+.obraz2 {
+  gap: 10px;
+  width: 50%;                     /* flaga zajmuje 40% szerokości */
+  flex-wrap: wrap;    
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: auto;                   /* wysokość dopasowana do zawartości */
+}
+
+.ing2 {
+  width: 10%;                    /* wypełnia całą szerokość .obraz2 */
+  aspect-ratio: 3 / 2;            /* proporcje flagi 2:3 */
+  border-radius: 4px;
+  transition: border-radius 0.4s ease;
+  background-size: cover;         /* wypełnia cały div */
+  background-position: center;    /* wyśrodkowanie */
+  background-repeat: no-repeat;
+  transition: transform 0.2s ease;
+}
+.ing2:hover {
+  transform:scale(150%)
+}
+.wypo2{
+  height: 20px;
+  background-color: #efe7e4;
+}
+.zeg {
+  padding: 4%;
+  align-items: center;
+  justify-items: center;
+  gap: 50px;
+  width: 100%;                   
+  flex-wrap: wrap;    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;                   /* wysokość dopasowana do zawartości */
+}
+.sytuacje{
+    align-items: center;
+  justify-items: center;
+  width: 20%;                    /* wypełnia całą szerokość .obraz2 */
+  aspect-ratio: 3 / 2;            /* proporcje flagi 2:3 */
+  border-radius: 8px;
+  transition: border-radius 0.4s ease;
+  background-size: cover;         /* wypełnia cały div */
+  background-position: center;    /* wyśrodkowanie */
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+}
+.sytuacje:hover{
+    transform:scale(140%)
+}
+
+
+.dokumenty{
+  padding: 4%;
+  align-items: center;
+  justify-items: center;
+  gap: 50px;
+  width: 100%;                   
+  flex-wrap: wrap;    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;  
+}
+
+.dokument{
+      align-items: center;
+  justify-items: center;
+  width: 40%;                    /* wypełnia całą szerokość .obraz2 */
+  aspect-ratio: 3 / 2;            /* proporcje flagi 2:3 */
+  border-radius: 16px;
+  transition: border-radius 0.4s ease;
+  background-size: cover;         /* wypełnia cały div */
+  background-position: center;    /* wyśrodkowanie */
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+
+}
+.dokument:hover{
+    transform:scale(110%)
+}
+
+
+
+/* symbole*/
+
+.a0 .material-symbols-outlined {
+  font-size: 120%; /* zmiana rozmiaru konkretnej ikony */
+  color: #91562b;  /* (opcjonalnie) kolor */
+  vertical-align: middle;
+  max-width: 120%;
+}
+.nagl .material-symbols-outlined {
+
+  transform: rotate(45deg);
+  font-size: 100px; /* zmiana rozmiaru konkretnej ikony */
+  color: #91562b;  /* (opcjonalnie) kolor */
+  vertical-align: middle;
+}
+
+
+
+.nagl3 .material-symbols-outlined {
+
+
+  font-size: 100px; /* zmiana rozmiaru konkretnej ikony */
+  color: #91562b;  /* (opcjonalnie) kolor */
+  vertical-align: middle;
+}
+
+
+.nagl4 .material-symbols-outlined {
+
+
+  font-size: 100px; /* zmiana rozmiaru konkretnej ikony */
+  color: #91562b;  /* (opcjonalnie) kolor */
+  vertical-align: middle;
+}
+
+.nagl33{
+  text-align: center;
+  justify-items: center;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.nagl3{
+    color: rgb(0, 0, 0);
+    font-size: 100px;
+}
+
+
+
+.nagl44{
+    text-align: center;
+  justify-items: center;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.nagl4{
+    color: rgb(0, 0, 0);
+    font-size: 100px;
+}
+
+.background-bar {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 700px;
+  height: 20px;
+  transform: rotate(45deg) translate(200px, 800px);
+  background-color: rgb(#000000);
+  pointer-events: none; /* sprawia, że NIE da się go kliknąć */
+  }
+  .nauka{
+    font-size: 40px;
+    text-align: center;
+  justify-items: center;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  }
+
+  .p2{
+      font-size: 30px;
+    text-align: center;
+  justify-items: center;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  }
+  .reszta {
+    height: 500px;
+  background-color: #efe7e4;
+  padding: 2%;
+
+}
+.danek{
+    margin-left: 5%;
+  margin-right: 5%;
+  background-color: #efe7e4;
+  height: 100%;
+  border: 2px solid black; /* grubość | styl | kolor */
+  padding: 1%;
+  
+}
+.wwa{
+  font-size: 30px;
+  padding: 5%;
+  background-color: #ffffff;
+  height: 100%;
+  
+}
+.wwa .material-symbols-outlined{
+  font-size: 30px;
+}
+.d1{
+margin-bottom: 20px;
+}
+.menues{
+
+align-items: center;
+align-content: center;
+text-align: center;
+  position:fixed;
+  top: 800px;       /* odległość od góry */
+  left: 1730px;         /* od lewej */
+
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    transition: border-radius 0.4s ease;
+
+    /* Gradient + obraz */
+    background-color: #c9b3abaa;
+    background-position: -90px;
+    background-size: 1200px auto;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay; /* można zmieniać np. overlay, multiply, screen */  
+}
+
+.menues .material-symbols-outlined{
+transform: rotate(90deg);
+color: #000000;
+}
+.menues:hover{
+    background-color: #e7e7e7aa;
+
+}
+
+
+.active {
+  background-color:#dbcdc8; /* kolor klikniętego */
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+/* 🔹 Mobilne zachowanie */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* pokaż przycisk */
+  }
+
+  /* Ukryj Twoje menu na telefonach */
+  #menu {
+    display: none;
+    flex-direction: column;
+    background: #333; /* możesz zmienić na swój kolor */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 250px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  /* Gdy klikniesz – menu się pojawia */
+  #menu.show {
+    display: flex;
+  }
+}

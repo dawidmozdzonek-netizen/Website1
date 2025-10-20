@@ -157,7 +157,7 @@ height: 0px;
     margin-left: 5%;
     justify-content: left;
     padding-right: 5%;
-    width: 130%;
+    width: 100%;
     height: auto;
   }
 }
@@ -647,6 +647,7 @@ color: #000000;
     flex-direction: column;   
   }
 }
+
 
 
 

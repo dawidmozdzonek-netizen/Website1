@@ -6,7 +6,9 @@
 html {
   scroll-behavior: smooth;
 }
-
+html, body {
+  overflow-x: hidden;
+}
 
 .spac{
 }
@@ -645,6 +647,7 @@ color: #000000;
     flex-direction: column;   
   }
 }
+
 
 
 

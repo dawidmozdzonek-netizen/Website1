@@ -248,7 +248,7 @@ height: 0px;
     width: 600px;
     height: 600px;
         background-image: 
-        url(/Users/dawid/Desktop/stronaM/1000002076.jpg);
+        url("https://raw.githubusercontent.com/dawidmozdzonek-netizen/Website1/main/1000002076.jpg");
     background-position: -90px;
     background-size: 1200px auto;
     border-radius: 2%;
@@ -645,5 +645,6 @@ color: #000000;
     flex-direction: column;   
   }
 }
+
 
 

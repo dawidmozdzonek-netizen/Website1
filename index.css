@@ -108,6 +108,7 @@ height: 0px;
   .kty {
     display: flex;
     flex-direction: column;
+    gap: 0;
   text-decoration: none;
   justify-content: center;
   align-items: center;
@@ -644,6 +645,7 @@ color: #000000;
     flex-direction: column;   
   }
 }
+
 
 
 

@@ -203,8 +203,8 @@ height: 0px;
 .ing {
   
   display: flex;
-    width: 600px;
-    height: 600px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     transition: border-radius 0.4s ease;
 
@@ -661,6 +661,7 @@ color: #000000;
     flex-direction: column;   
   }
 }
+
 
 
 

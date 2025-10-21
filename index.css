@@ -263,7 +263,7 @@ height: 0px;
         url("https://raw.githubusercontent.com/dawidmozdzonek-netizen/Website1/main/1000002076.jpg");
     background-position: -90px;
     background-size: 1200px auto;
-    border-radius: 2%; zmieniać np. overlay, multiply, screen */  
+    border-radius: 2%; 
   }
 }
 a{
@@ -657,6 +657,7 @@ color: #000000;
     flex-direction: column;   
   }
 }
+
 
 
 

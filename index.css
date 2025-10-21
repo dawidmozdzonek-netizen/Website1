@@ -191,7 +191,7 @@ nav li {
   margin-top: 40PX;
     line-height: 50px;
     color: rgb(0, 0, 0);
-  font-size: clamp(16px, 5vw, 25px);
+  font-size: clamp(16px, 15vw, 25px);
     
 }
 @media (max-width: 600px) {
@@ -199,7 +199,7 @@ nav li {
   margin-top: 40PX;
     line-height: 30px;
     color: rgb(0, 0, 0);
-  font-size: 2px;
+  font-size: 12px;
   }
 }
 
@@ -686,6 +686,7 @@ color: #000000;
     flex-direction: column;   
   }
 }
+
 
 
 

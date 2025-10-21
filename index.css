@@ -10,8 +10,6 @@ html, body {
   overflow-x: hidden;
 }
 
-.spac{
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
@@ -29,6 +27,14 @@ html, body {
 
 
 }
+
+
+.menu ul {
+  list-style: none; /* usuwa kropki listy */
+  padding: 0;
+  margin: 0;
+}
+
 main{
 background-color: #ffffff;}
 
@@ -90,7 +96,7 @@ background-color: #ffffff;}
 height: 0px;
   }
 }
-.kty {
+nav {
   margin-right:5%;
   text-decoration: none;
   gap: 20px;
@@ -105,9 +111,19 @@ height: 0px;
 
 }
 
+nav li {
+  display: inline;       /* każdy <li> ma się zachowywać jak element w linii */
+}
+
 
 @media (max-width: 600px) {
-  .kty {
+nav li {
+    display: block;
+    width: 100%;    /* każdy <li> ma się zachowywać jak element w linii */
+  }
+}
+@media (max-width: 600px) {
+  nav {
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -149,15 +165,18 @@ height: 0px;
   justify-content: center;
     width: 100%;
     height: auto;
+    padding: 5%;
 }
 }
 @media (max-width: 600px) {
   .centrum {
+    margin-left: 0%;
     justify-content: center;
     width: 100%;
     height: auto;
   }
 }
+
 
 
 .bold {
@@ -175,6 +194,17 @@ height: 0px;
   font-size: clamp(16px, 5vw, 25px);
     
 }
+@media (max-width: 600px) {
+  .ppp {
+  margin-top: 40PX;
+    line-height: 30px;
+    color: rgb(0, 0, 0);
+  font-size: clamp(16px, 5vw, 25px);
+  }
+}
+
+
+
 .TRES{
   padding: 2%;
   margin-top: 15%;
@@ -308,13 +338,15 @@ a{
 }
 
 
-.p1{    
+h1{ 
+  font-family: sans-serif;
+    font-size: 100%;   
     animation: slideFromLeft 1.2s ease-out forwards;
     margin-top: 1%;
 }
 
 @media (max-width: 600px) {
-  .p1 {
+  h1 {
         animation: none;
     margin-top: 1%;
   }
@@ -326,7 +358,7 @@ a{
 
 
 
-.div11{
+article{
   padding: 2%;
   text-align: justify;
     align-items: center;
@@ -338,7 +370,7 @@ a{
   border-radius: 20px 20px 0 0;
   transition: transform 0.5s ease;
 }
-.div11:hover{
+article:hover{
   transform:scale(114%)
 
 }

@@ -155,7 +155,7 @@ height: 0px;
 @media (max-width: 600px) {
   .centrum {
     margin-left: 5%;
-    justify-content: left;
+    justify-content: center;
     padding-right: 5%;
     width: 100%;
     height: auto;
@@ -220,8 +220,8 @@ height: 0px;
 @media (max-width: 600px) {
   .obraz {
     display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
     justify-items: center;
     width: auto;
     height: auto; 
@@ -657,6 +657,7 @@ color: #000000;
     flex-direction: column;   
   }
 }
+
 
 
 

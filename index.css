@@ -400,9 +400,9 @@ article:hover{
   color: aliceblue;
     text-align: justify;
   align-items: center;
-  padding: 3%;
+  padding: 5%;
   justify-content: center;
-  font-size: 9px;
+  font-size: 5px;
   }
 }
 .centrum2 {
@@ -700,6 +700,7 @@ color: #000000;
     flex-direction: column;   
   }
 }
+
 
 
 

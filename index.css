@@ -257,8 +257,8 @@ height: 0px;
 }
 @media (max-width: 600px) {
   .ing:hover{
-      width: 300px;
-    height: 300px;
+      width: 600px;
+    height: 600px;
         background-image: 
         url("https://raw.githubusercontent.com/dawidmozdzonek-netizen/Website1/main/1000002076.jpg");
     background-position: -90px;
@@ -657,6 +657,7 @@ color: #000000;
     flex-direction: column;   
   }
 }
+
 
 
 

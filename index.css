@@ -375,6 +375,14 @@ article:hover{
   transform:scale(114%)
 
 }
+
+@media (max-width: 600px) {
+article:hover{
+    transform:scale(100%) /* każdy <li> ma się zachowywać jak element w linii */
+  }
+}
+
+
 .podnag{
   padding: 1%;
     color: rgb(255, 255, 255);
@@ -700,6 +708,7 @@ color: #000000;
     flex-direction: column;   
   }
 }
+
 
 
 

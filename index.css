@@ -415,6 +415,7 @@ article:hover{
 }
 .centrum2 {
   display: flex;   
+  flex-wrap: wrap;    
   gap: 10px;              /* ustawiamy flex dla całego kontenera */ /* tekst i flaga po bokach */
   align-items: center;            /* pionowe wyśrodkowanie */
   margin-right: 5%;
@@ -708,6 +709,7 @@ color: #000000;
     flex-direction: column;   
   }
 }
+
 
 
 

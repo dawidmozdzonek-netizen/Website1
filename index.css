@@ -217,6 +217,26 @@ color: tgb(0, 0, 0)
   justify-content: center;
   gap: 2%;
 }
+
+@media (max-width: 600px) {
+.TRES{
+  padding: 2%;
+  margin-top: 15%;
+    background-color: #f7f3f2;
+  height: auto;
+    display: flex;
+    flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+}
+}
+
+
+
+
+
+
 .obraz {
     display: flex;
     justify-content:center;
@@ -371,6 +391,27 @@ article{
   border-radius: 20px 20px 0 0;
   transition: transform 0.5s ease;
 }
+
+
+
+@media (max-width: 600px) {
+article{
+  padding: 2%;
+  text-align: justify;
+  align-items: center;
+  justify-content: center;
+  padding: 1%;
+  background: linear-gradient(to top,  #ffffff, #ffffff);
+  height: auto;
+  flex: 1 1 300px; /* elastyczna szerokość */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 20px 20px 20px 20px;
+  transition: transform 0.5s ease;
+  margin-bottom: 5%;
+}
+}
+
+
 article:hover{
   transform:scale(114%)
 
@@ -393,6 +434,25 @@ article:hover{
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
+
+
+@media (max-width: 600px) {
+.podnag{
+  padding: 5%;
+    color: rgb(0, 0, 0);
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  font-size: 300%;
+  margin-bottom: 10%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+}
+
+
 .podp{
   color: aliceblue;
     text-align: justify;
@@ -405,7 +465,7 @@ article:hover{
 
 @media (max-width: 600px) {
   .podp{
-  color: aliceblue;
+  color: rgb(0, 0, 0);
     text-align: justify;
   align-items: center;
   padding: 5%;
@@ -416,7 +476,7 @@ article:hover{
 .centrum2 {
   display: flex;   
   flex-wrap: wrap;    
-  gap: 10px;              /* ustawiamy flex dla całego kontenera */ /* tekst i flaga po bokach */
+             /* ustawiamy flex dla całego kontenera */ /* tekst i flaga po bokach */
   align-items: center;            /* pionowe wyśrodkowanie */
   margin-right: 5%;
   margin-left: 5%;
@@ -430,6 +490,16 @@ margin-bottom: 30px;
   text-align: left;
 }
 
+
+@media (max-width: 600px) {
+.content2 {
+  width: 100%;                     /* tekst zajmuje 55% szerokości */
+  color: rgb(0, 0, 0);
+  text-align: left;
+    margin-bottom: 10%;
+}
+}
+
 .obraz2 {
   gap: 10px;
   width: 50%;                     /* flaga zajmuje 40% szerokości */
@@ -438,6 +508,19 @@ margin-bottom: 30px;
   justify-content: left;
   align-items: center;
   height: auto;                   /* wysokość dopasowana do zawartości */
+}
+
+
+@media (max-width: 600px) {
+.obraz2 {
+  gap: 10px;
+  width: 100%;                     /* flaga zajmuje 40% szerokości */
+  flex-wrap: wrap;    
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: auto;                   /* wysokość dopasowana do zawartości */
+}
 }
 
 .ing2 {
@@ -450,6 +533,22 @@ margin-bottom: 30px;
   background-repeat: no-repeat;
   transition: transform 0.2s ease;
 }
+
+
+@media (max-width: 600px) {
+.ing2 {
+  width: 20%;                    /* wypełnia całą szerokość .obraz2 */
+  aspect-ratio: 3 / 2;            /* proporcje flagi 2:3 */
+  border-radius: 4px;
+  transition: border-radius 0.4s ease;
+  background-size: cover;         /* wypełnia cały div */
+  background-position: center;    /* wyśrodkowanie */
+  background-repeat: no-repeat;
+  transition: transform 0.2s ease;
+}
+}
+
+
 .ing2:hover {
   transform:scale(150%)
 }
@@ -526,14 +625,34 @@ margin-bottom: 30px;
   vertical-align: middle;
   max-width: 120%;
 }
-.nagl .material-symbols-outlined {
 
+.nagl .material-symbols-outlined {
   transform: rotate(45deg);
   font-size: 100px; /* zmiana rozmiaru konkretnej ikony */
   color: #91562b;  /* (opcjonalnie) kolor */
   vertical-align: middle;
 }
 
+
+@media (max-width: 600px) {
+.nagl .material-symbols-outlined {
+
+  font-size: 50px; /* zmiana rozmiaru konkretnej ikony */
+  color: #91562b;  /* (opcjonalnie) kolor */
+  vertical-align: middle;
+}
+}
+
+
+@media (max-width: 600px) {
+.nagl .galery-ikona {
+    transform: rotate(0deg);
+  font-size: 50px; /* zmiana rozmiaru konkretnej ikony */
+  color: #91562b;  /* (opcjonalnie) kolor */
+  vertical-align: middle;
+}
+}
+ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
 
 
 .nagl3 .material-symbols-outlined {
@@ -553,19 +672,66 @@ margin-bottom: 30px;
   vertical-align: middle;
 }
 
-.nagl33{
+.nagl{
+  text-align: left;
+  justify-items: left;
+  justify-content: left;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+
+@media (max-width: 600px) {
+.nagl{
   text-align: center;
   justify-items: center;
   justify-content: center;
   margin-left: 5%;
   margin-right: 5%;
 }
-.nagl3{
-    color: rgb(0, 0, 0);
-    font-size: 100px;
 }
 
 
+.nagl0{
+  font-size: 400%;
+  text-align: left;
+  justify-items: left;
+  justify-content: left;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+
+@media (max-width: 600px) {
+.nagl0{
+    font-size: 300%;
+
+  text-align: left;
+  justify-items: left;
+  justify-content: left;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+}
+
+
+@media (max-width: 600px) {
+.ngl33 .material-symbols-outlined{
+    text-align: center;
+  justify-items: center;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+}
+
+
+.ngl33 .material-symbols-outlined{
+    transform: rotate(0deg);
+  font-size: 100px; /* zmiana rozmiaru konkretnej ikony */
+  color: #91562b;  /* (opcjonalnie) kolor */
+  vertical-align: middle;
+}
 
 .nagl44{
     text-align: center;
@@ -610,7 +776,14 @@ margin-bottom: 30px;
     height: 500px;
   background-color: #efe7e4;
   padding: 2%;
+}
 
+@media (max-width: 600px) {
+  .reszta {
+    height: auto;
+  background-color: #efe7e4;
+  padding: 2%;
+}
 }
 .danek{
     margin-left: 5%;
@@ -628,9 +801,33 @@ margin-bottom: 30px;
   height: 100%;
   
 }
+
+@media (max-width: 600px) {
+.wwa{
+  font-size: 20px;
+  padding: 5%;
+  background-color: #ffffff;
+  height: 100%;
+  
+}
+}
+
+
+
+
+
 .wwa .material-symbols-outlined{
   font-size: 30px;
 }
+
+
+@media (max-width: 600px) {
+.wwa .material-symbols-outlined{
+  font-size: 20px;
+}
+}
+
+
 .d1{
 margin-bottom: 20px;
 }
@@ -689,7 +886,7 @@ color: #000000;
   /* Ukryj Twoje menu na telefonach */
   #menu {
 
-    height: 35%;
+    height: 20%;
     justify-content: flex-start;
       z-index: 1000;
     display: none;
@@ -709,7 +906,6 @@ color: #000000;
     flex-direction: column;   
   }
 }
-
 
 
 

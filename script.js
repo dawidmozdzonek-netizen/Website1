@@ -70,3 +70,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
+window.addEventListener("load", function() {
+  const loadingScreen = document.getElementById("loading-screen");
+
+  // minimalny czas wyświetlania: 3 sekundy
+  setTimeout(() => {
+    loadingScreen.classList.add("hidden");
+  }, 3000);
+});

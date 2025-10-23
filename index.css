@@ -1023,8 +1023,71 @@ color: #000000;
   }
 }
 
+/* pełny ekran ładowania */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ccc; /* szary ekran */
+  z-index: 9999;   /* nad wszystkim */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #333;
+  transition: opacity 0.5s ease;
+}
+
+/* kiedy ukrywamy */
+#loading-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* przykładowa zawartość strony */
+.content {
+  padding: 2rem;
+}
 
 
+/* pełny ekran ładowania */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #efe7e4; /* szary ekran */
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* małe kółko loadera */
+.loader {
+  border: 24px solid #f3f3f3; /* jasny kolor tła */
+  border-top: 24px solid #333; /* ciemny pasek, który się obraca */
+  border-radius: 50%;        /* okrągłe */
+  width: 100px;
+  height: 100px;
+  animation: spin 1s linear infinite; /* animacja obracania */
+}
+
+/* animacja obracania */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ukrywanie po załadowaniu */
+#loading-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
 
 
 

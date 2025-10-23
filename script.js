@@ -78,5 +78,6 @@ window.addEventListener("load", function() {
   // minimalny czas wyświetlania: 3 sekundy
   setTimeout(() => {
     loadingScreen.classList.add("hidden");
-  }, 3000);
+  }, 2000);
 });
+

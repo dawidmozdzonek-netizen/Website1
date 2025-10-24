@@ -9,64 +9,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-  // === Efekt animacji dla ARTYKUŁÓW ===
-  document.addEventListener("DOMContentLoaded", function() {
-    const articles = document.querySelectorAll("article");
+// === ANIMACJE SCROLLA ===
+document.addEventListener("DOMContentLoaded", function() {
+  const animatedElements = document.querySelectorAll("article, .podnag, .nauka");
 
-    function checkScroll() {
-      const triggerBottom = window.innerHeight * 0.85;
+  function checkScroll() {
+    const triggerBottom = window.innerHeight * 0.85;
 
-      articles.forEach(article => {
-        const rect = article.getBoundingClientRect();
-        if (rect.top < triggerBottom) {
-          article.classList.add("show");
-        }
-      });
-    }
+    animatedElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
 
-    window.addEventListener("scroll", checkScroll);
-    checkScroll(); // sprawdź przy starcie
-  });
+      if (rect.top < triggerBottom && rect.bottom > 0) {
+        el.classList.add("show");
+      } else {
+        el.classList.remove("show");
+      }
+    });
+  }
 
+  window.addEventListener("scroll", checkScroll, { passive: true });
+  checkScroll();
+});
 
-    // === Efekt animacji dla ARTYKUŁÓW ===
-  document.addEventListener("DOMContentLoaded", function() {
-    const Headers = document.querySelectorAll(".podnag");
-
-    function checkScroll() {
-      const triggerBottom = window.innerHeight * 0.85;
-
-      Headers.forEach(podnag => {
-        const rect = podnag.getBoundingClientRect();
-        if (rect.top < triggerBottom) {
-          podnag.classList.add("show");
-        }
-      });
-    }
-
-    window.addEventListener("scroll", checkScroll);
-    checkScroll(); // sprawdź przy starcie
-  });
-
-
-      // === Efekt animacji dla ARTYKUŁÓW ===
-  document.addEventListener("DOMContentLoaded", function() {
-    const Headers = document.querySelectorAll(".nauka");
-
-    function checkScroll() {
-      const triggerBottom = window.innerHeight * 0.85;
-
-      Headers.forEach(nauka => {
-        const rect = nauka.getBoundingClientRect();
-        if (rect.top < triggerBottom) {
-          nauka.classList.add("show");
-        }
-      });
-    }
-
-    window.addEventListener("scroll", checkScroll);
-    checkScroll(); // sprawdź przy starcie
-  });
 
 
 
@@ -79,5 +43,28 @@ window.addEventListener("load", function() {
   setTimeout(() => {
     loadingScreen.classList.add("hidden");
   }, 2000);
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const naglki = document.querySelectorAll(".nagl");
+
+  function checkScroll() {
+    if (window.innerWidth > 600) return; // tylko mobile
+
+    const triggerBottom = window.innerHeight * 0.85;
+
+    naglki.forEach(nagl => {
+      const rect = nagl.getBoundingClientRect();
+      if (rect.top < triggerBottom && rect.bottom > 0) {
+        nagl.classList.add("show");
+      } else {
+        nagl.classList.remove("show"); // jeśli chcesz efekt odwrotny przy przewinięciu w górę
+      }
+    });
+  }
+
+  window.addEventListener("scroll", checkScroll, { passive: true });
+  checkScroll();
 });
 

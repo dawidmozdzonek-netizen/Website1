@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -149,7 +150,8 @@ nav li {
     height: auto;
     display: flex;
     flex-wrap: wrap;
-  
+    opacity: 0;
+    animation-delay: 2.5s;
 }
 
 
@@ -187,6 +189,28 @@ nav li {
   color: rgb(0, 0, 0);
   font-size: clamp(40px, 5vw, 100px);
 }
+
+@media (max-width: 600px) {
+  .nagl {
+    margin-left: 0%;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    opacity: 0;               /* początkowo niewidoczny */
+  transform: translateY(40px); /* przesunięcie w dół */
+  transition: all 0.8s ease-out;
+  }
+}
+
+
+@media (max-width: 600px) {
+.nagl.show {
+  opacity: 1;
+  transform: translateY(0);  /* wraca na miejsce */
+}
+}
+
+
 .ppp{
   margin-top: 40PX;
     line-height: 50px;
@@ -318,16 +342,22 @@ a{
     text-decoration: none;
     text-decoration-color: #000000;
 }
-.a0{
-    text-decoration: none;
-    text-decoration-color: #000000;
-
-  border-radius: 24px; /* zaokrąglone rogi */
+.a0 {
+  text-decoration: none;
+  text-decoration-color: #000000;
+  border-radius: 24px;
   color: rgb(0, 0, 0);
-    animation: Animacia3 1.5s ease-out forwards;
-    font-size: 150%; /*20px*/
-    transition: transform 0.3s ease;
-    padding: 7px;
+  font-size: 150%;
+  transition: transform 0.3s ease;
+  padding: 7px;
+
+  /* 🔥 Początkowy stan — ukryty i lekko przesunięty */
+  opacity: 0;
+
+
+  /* 🎬 Animacja */
+  animation: Animacia3 1.5s ease-out forwards;
+  animation-delay: 2.5s;
 }
 
 
@@ -341,7 +371,15 @@ a{
     animation: Animacia3 1.5s ease-out forwards;
     font-size: 130%; /*20px*/
     transition: transform 0.3s ease;
+      /* 🔥 Początkowy stan — ukryty i lekko przesunięty */
+  opacity: 0;
+
+
+  /* 🎬 Animacja */
+  animation: Animacia3 1.5s ease-out forwards;
+  animation-delay: 0.1s;
     padding: 7px;
+
   }
 }
 
@@ -390,6 +428,8 @@ article {
   flex: 1 1 300px; /* elastyczna szerokość */
   border-radius: 20px 20px 0 0;
   transition: transform 0.5s ease;
+  opacity: 1;
+
 }
 
 /* === Efekt hover na komputerze === */
@@ -418,8 +458,12 @@ article:hover {
     transform: translateY(40px);
   }
 
+
+
+
+  
   article.show {
-    opacity: 4;
+    opacity: 1;
     transform: translateY(0);
   }
 

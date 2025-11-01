@@ -34,6 +34,7 @@ html, body {
   list-style: none; /* usuwa kropki listy */
   padding: 0;
   margin: 0;
+  line-height: 3.0;
 }
 
 main{
@@ -132,9 +133,10 @@ nav li {
   justify-content: center;
   align-items: center;
   height: top;
-  background-color: #efe7e4;
+  background-color: #f4eeec;    
   width: top;
   max-width: 100%;
+  line-height: 1.8;
   }
 }
 
@@ -207,22 +209,58 @@ nav li {
 .nagl.show {
   opacity: 1;
   transform: translateY(0);  /* wraca na miejsce */
+  color: #f3f3f3;
+  padding-top: 10%;
 }
 }
 
+.nagleduka.show {
+  padding-top: 10%;
+  opacity: 1;
+  transform: translateY(0);  /* wraca na miejsce */
+  color: #ffffff;
+}
+
+
+@media (max-width: 600px) {
+.nagleduka.show {
+  padding-top: 10%;
+  opacity: 1;
+  transform: translateY(0);  /* wraca na miejsce */
+  color: #ffffff;
+}
+}
+
+.pppG{
+    margin-top: 40PX;
+    line-height: 50px;
+    color: rgb(0, 0, 0);
+  font-size: clamp(12px, 3vw, 18px);
+  text-align: left;
+}
+@media (max-width: 600px) {
+  .pppG {
+  margin-top: 40PX;
+    line-height: 30px;
+    color: rgb(0, 0, 0);
+  font-size: 15px;
+color: tgb(0, 0, 0)
+  }
+}
 
 .ppp{
   margin-top: 40PX;
     line-height: 50px;
     color: rgb(0, 0, 0);
   font-size: clamp(12px, 3vw, 18px);
+  text-align: center;
     
 }
 @media (max-width: 600px) {
   .ppp {
   margin-top: 40PX;
     line-height: 30px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
   font-size: 15px;
 color: tgb(0, 0, 0)
   }
@@ -246,7 +284,7 @@ color: tgb(0, 0, 0)
 .TRES{
   padding: 2%;
   margin-top: 15%;
-    background-color: #f7f3f2;
+    background-color: #ffffff;
   height: auto;
     display: flex;
     flex-wrap: wrap;
@@ -369,7 +407,7 @@ a{
   border-radius: 24px; /* zaokrąglone rogi */
   color: rgb(0, 0, 0);
     animation: Animacia3 1.5s ease-out forwards;
-    font-size: 130%; /*20px*/
+    font-size: 170%; /*20px*/
     transition: transform 0.3s ease;
       /* 🔥 Początkowy stan — ukryty i lekko przesunięty */
   opacity: 0;
@@ -397,8 +435,12 @@ a{
 }
 
 
-h1{ 
-  font-family: sans-serif;
+h1{
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
     font-size: 100%;   
     animation: slideFromLeft 1.2s ease-out forwards;
     margin-top: 1%;
@@ -449,7 +491,7 @@ article:hover {
     height: auto;
     flex: 1 1 300px; /* elastyczna szerokość */
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 12px;
     transition: all 0.8s ease-out;
     margin-bottom: 5%;
 
@@ -495,7 +537,7 @@ article:hover {
   align-content: center;
   justify-content: center;
   justify-items: center;
-  font-size: 300%;
+  font-size: 200%;
   margin-bottom: 10%;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -549,6 +591,22 @@ transition: opacity 0.6s ease, transform 0.6s ease;
   margin-left: 5%;
   padding: 20px;                 /* odstęp wewnętrzny */
 margin-bottom: 30px;
+}
+
+
+@media (max-width: 600px) {
+.centrum2 {
+  background-color: #000000;
+  display: flex;   
+  margin-right: 0;
+  margin-left: 0;
+  flex-wrap: wrap;    
+             /* ustawiamy flex dla całego kontenera */ /* tekst i flaga po bokach */
+  align-items: center;            /* pionowe wyśrodkowanie */
+
+  padding: 20px;                 /* odstęp wewnętrzny */
+margin-bottom: 0px;
+}
 }
 
 .content2 {
@@ -902,16 +960,35 @@ ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
   margin-left: 5%;
   margin-right: 5%;
   }
+
+
+
+
+
+  p{
+    color: aliceblue;
+  }
+@media (max-width: 600px) {
+  .p2{
+    color: aliceblue;
+      font-size: 30px;
+    text-align: center;
+  justify-items: center;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  }
+}
   .reszta {
     height: 500px;
-  background-color: #efe7e4;
+  background-color: #000000;
   padding: 2%;
 }
 
 @media (max-width: 600px) {
   .reszta {
     height: auto;
-  background-color: #efe7e4;
+  background-color: #000000;
   padding: 2%;
 }
 }
@@ -920,7 +997,7 @@ ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
   margin-right: 5%;
   background-color: #efe7e4;
   height: 100%;
-  border: 2px solid black; /* grubość | styl | kolor */
+  border: 2px solid rgb(56, 0, 0); /* grubość | styl | kolor */
   padding: 1%;
   
 }
@@ -936,7 +1013,7 @@ ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
 .wwa{
   font-size: 20px;
   padding: 5%;
-  background-color: #ffffff;
+  background-color: #000000;
   height: 100%;
   
 }
@@ -944,7 +1021,9 @@ ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
 
 
 
-
+.www{
+  color: #ccc;
+}
 
 .wwa .material-symbols-outlined{
   font-size: 30px;
@@ -1046,12 +1125,12 @@ color: #000000;
   /* Ukryj Twoje menu na telefonach */
   #menu {
 
-    height: 20%;
+    height: 50%;
     justify-content: flex-start;
       z-index: 1000;
     display: none;
     flex-direction: column;
-    background: #efe7e4; /* możesz zmienić na swój kolor */
+    background: #f4eeec; /* możesz zmienić na swój kolor */
     position: absolute;
     top: 60px;
     left: 0;
@@ -1134,11 +1213,20 @@ color: #000000;
 }
 
 
+@media (max-width: 768px) {
+.Edukacjia{
+  background-color: #1c0000;
+}
+}
 
 
+.Galeria{
+  background-color: #171717;
+}
 
-
-
+footer{
+  background-color: #000000;
+}
 
 
 

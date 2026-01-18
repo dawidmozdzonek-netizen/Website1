@@ -16,7 +16,8 @@ background-color: #ffffff;
 
 /* ciemny motyw */
 body.dark-theme {
-  background-color: #000000e3;
+  background-color: #000000;
+  color: white;
 }
 
 /* ==========================================
@@ -40,7 +41,10 @@ list-style-type: none;
 transition: height 0.6s ease, gap 0.6s ease, border-bottom-color 0.9s ease; 
 }
 
-
+body.dark-theme nav{
+  background-color: #000000;
+  color: white;
+}
 /* ==========================================
 STRONA OGULNE – CSS / NAWIGACJA MENU na mobilki
 ========================================== */
@@ -93,7 +97,6 @@ STRONA OGULNE – CSS / NAWIGACJA MENU na mobilki
   }
 }
 
-
 /* Ukrywamy listę */
 .lista {
     list-style-type: none;
@@ -131,6 +134,10 @@ STRONA OGULNE – CSS / NAWIGACJA MENU z x ponizej 768 (telefony tablety)
 .X-menu{
   background-color: #002dbf;    
   background-color:rgba(235, 235, 235, 0.82);
+}
+body.dark-theme .X-menu{
+  color: white;
+    background-color:rgba(33, 33, 33, 0.82);
 }
 @media (max-width: 768px) {
   .X-menu {
@@ -202,7 +209,9 @@ efekt zminy burgera na x-a
   border-radius: 2px;
   transition: 0.3s ease;
 }
-
+body.dark-theme span{
+  background-color:rgba(255, 255, 255, 0.82);
+}
 .burger.open span:nth-child(1){
   transform: rotate(45deg) translate(12px, 1px);
 }
@@ -251,13 +260,18 @@ cursor: pointer;
 color: rgb(0, 0, 0);
 transition: color 0.9s ease, border-bottom-color 0.9s ease; /* to daje ładniejsze przejscia*/
 }
-
+body.dark-theme .a0{
+  color: white;
+}
 .a0:hover{
   width: 100%; 
   color: #4c4c4c;
 }
 .a0.active{
   width: 100%; 
+  color: #ff5e00;
+}
+body.dark-theme .a0.active{
   color: #ff5e00;
 }
 .a0.active::after{
@@ -287,6 +301,9 @@ font-style: normal;
   transition: width 0.3s;
     margin-top: 10px; 
     z-index: 999;
+}
+body.dark-theme .a0::after{
+  background-color: #ffffff;
 }
 .a0:hover::after {
   width: 100%; 
@@ -586,7 +603,9 @@ align-content: center;
 transition: background-color 0.6s ease, color 0.6s ease;
 color:#d24d00;
 } 
-
+body.dark-theme .button-wiecej{
+  background-color: #000000;
+}
 .button-wiecej:hover{
 background-color:#d24d0088;
 color: white;
@@ -734,7 +753,9 @@ font-weight: 400;
 color: #000000;
 font-style: normal;
 }
-
+body.dark-theme h2{
+  color: white;
+}
 h1{
 line-height: 1;
 font-size: clamp(1rem, 13vw, 12rem);
@@ -747,7 +768,12 @@ font-weight: 400;
 color: #000000;
 font-style: normal;
 }
-
+body.dark-theme h1{
+  color: rgb(255, 255, 255);
+}
+body.dark-theme h3{
+  color: rgb(255, 255, 255);
+}
 h2::after{
   content: "";
   position: absolute;           /* start w środku */
@@ -1588,7 +1614,14 @@ button {
     align-items: center;
   flex-wrap: wrap;
 }
-
+body.dark-theme .edukacjia{
+  background-color: #000000;
+  color: white;
+}
+body.dark-theme .edukacjia-header{
+  background-color: #000000;
+  color: white;
+}
 .text-edukacjia{
   background-color: #ffffff00;
   width: 50%;
@@ -1609,7 +1642,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f5f5f5;
+  background-color: #f5f5f500;
   padding: 0; /* padding powoduje dodatkowe problemy */
 }
 @media (max-width: 768px) {
@@ -1636,7 +1669,7 @@ color: #000000;
   .edukacjia-header{
   font-size: 40px;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 30px;
   padding: 2%;
   color: #000000;
@@ -1666,6 +1699,14 @@ align-items: center;
 align-content: center;
 width: 100%;
 }
+
+body.dark-theme .podroze{
+  background-color: #00000000;
+  color: white;
+}
+
+
+
 .podoze-heder{
   width: 100%;
   text-align: center;
@@ -1694,6 +1735,7 @@ align-content: center;
   color: #063014;
 }
 .kontynet{
+  color: white;
   position: relative;   /* 🔥 potrzebne */
   overflow: hidden;     /* nic nie wyłazi */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -1704,15 +1746,15 @@ align-content: center;
   background-position: center;
   background-repeat: no-repeat;
   width: 25%; /* Przykładowe wymiary */
-  min-width: 160px;
+  min-width: 100px;
   object-fit: cover;    /* obraz wypełnia div */
 transition: background-size 0.7s ease-in-out;
   aspect-ratio: 4 / 4;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 468px) {
   .kontynet{
-    min-width: 50%;
+    min-width: 100%;
 
   }
 }
@@ -1753,6 +1795,11 @@ max-height: 90%;/* 🔥 nie może zająć więcej niż połowę kafelka */
   background-color: #00000081;
 
   font-size: clamp(10px, 1.2vw, 14px);  /* 🔥 skaluje się z ekranem */
+}
+@media (max-width: 768px) {
+.ul-kraje{
+  font-size: clamp(10px, 9vw, 16px);  /* 🔥 skaluje się z ekranem */
+}
 }
 .podoze-heder{
     justify-content: center;
@@ -1807,7 +1854,9 @@ background-color: #ffffff;
   color: #000000;
   border-color: #00000000;
 }
-
+body.dark-theme .zanzwa-kontynety{
+  color: white;
+}
 @media (max-width: 768px){
 .zanzwa-kontynety{
   font-size: 1rem;
@@ -1849,6 +1898,11 @@ font-size: 2px!important;
   top: 7vh; /* albo np. 80px jeśli masz header */
 }
 }
+
+body.dark-theme .ramka3{
+  background-color: #000000;
+  color: white;
+}
 .edukacjia-header2{
 font-size: 75px;
 font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -1863,6 +1917,10 @@ margin-bottom: 0px;
 font-size: 55px;
 padding: 0%;
 }
+}
+
+body.dark-theme .edukacjia-header2{
+  color: white;
 }
 .text-p-edukacja2{
   width: 100%;
@@ -1888,6 +1946,15 @@ padding: 0%;
   background-color: #f1f1f1;
   height: 100%;
 }
+body.dark-theme .galeria-obrazy{
+  background-color: #0b0b0b;
+  color: white;
+}
+body.dark-theme .galeria-obrazy2{
+  background-color: #0b0b0b;
+  color: white;
+}
+
 .galeria-obrazy2{
 justify-content: center; /* Środkuje elementy w poziomie */
 justify-content: space-between;

@@ -82,6 +82,9 @@ STRONA OGULNE – CSS / NAWIGACJA MENU na mobilki
   }
 
   .anno{
+    margin-left: 20%;
+    margin-bottom: 10%;
+    width: 200px;
     margin-top: auto;
         justify-content: center;
     align-content: center;
@@ -386,6 +389,8 @@ box-shadow: 0px 0px 15px black;
 @media (max-width: 768px){
 .naglowek{
 height: 50svh;
+
+
 }
 }
 
@@ -472,10 +477,8 @@ color: #f5f5f5;
 
 @media (max-width: 768px){
   .heder2{
-  font-size: 30px;
-  font-family: "Yeseva One", serif;
+  font-size: 35px;
   margin-bottom: 30px;
-  color: #05220e;
   }
 }
 
@@ -518,12 +521,22 @@ height: 100%;
 
 .p-modal{
 font-size: 20px;
+  text-align: left;
 }
-
+@media (max-width: 768px){
+  .p-modal{
+  font-size: 14px;
+  padding: 2%;
+  }
+}
 
 
 /* /POMOC PRAWA */
 /*  pomoc - [PRAWA] - lista */
+li{
+    list-style-type: none;
+    text-decoration: none;
+}
 .lista-1{
 width: 50%;
 display: flex;  
@@ -611,6 +624,7 @@ justify-content: center;
 justify-items: center;
 align-items: center;
 }
+
 /* ==========================================
  MODAL - tresci modala
 ========================================== */
@@ -627,7 +641,21 @@ justify-content: center;
 align-items: center;
 overflow-y: auto;
 }
-
+@media (max-width: 768px) {
+.modal-content {
+margin-top: 7vh;
+display: flex;
+background: white;
+height: 80%;
+width: 80%;
+max-height: 86%;
+padding: 20px;
+position: relative;
+justify-content: center;
+align-items: center;
+overflow-y: auto;
+}
+}
 
 /* ==========================================
  MODAL - przycisk zamykający modala
@@ -752,6 +780,12 @@ font-family: "Yeseva One", serif;
 font-weight: 400;
 color: #000000;
 font-style: normal;
+}
+
+@media (max-width: 768px) {
+h3{
+  padding-top: 25%;
+}
 }
 @media (max-width: 768px) {
   h1{
@@ -1334,15 +1368,9 @@ border-color: #ffffff00;
   display: flex;           /* flexbox dla samego mpun */
   justify-content: center; /* wyśrodkowanie poziome ikony */
   align-items: center;     /* wyśrodkowanie pionowe ikony */
-  background-color: #f5f5f5;
   width: 45px;
   height: 45px;
   font-size: 2vh;
-  border-radius: 50%;
-  color: #00bf63;
-  background-color: #ffffff73;
-  border: solid, 3px;
-  border-color: #ffffff00;
   }
 }
 
@@ -1447,7 +1475,7 @@ padding: 2rem;
 }
 @media (max-width: 768px) {
   .footer-copy{
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   }
 }
 
@@ -1737,16 +1765,20 @@ max-height: 90%;/* 🔥 nie może zająć więcej niż połowę kafelka */
 .liczba-kontynety{
   width: 3rem;
   height: 3rem;
-  border: solid 2px;
   justify-content: center;
   justify-items: center;
   align-items: center;
   align-content: center;
   color: #ff5e00;
-  border-color: #ffffff;
   background-color: #0000002d;
   border-radius: 50%;
 }
+@media (max-width: 768px) {
+  .liczba-kontynety{
+      background-color: #ffffff00;
+  }
+}
+
 .liczba-k{
   border-radius: 50%;
     justify-content: center;
@@ -1809,19 +1841,12 @@ text-align: center;
 
 @media (max-width: 768px){
 .ramka3{
-  flex: 1 1 40%;
-  min-width: 300px;
-  z-index: -1;
-border: solid 1px;
-padding: 2%;
+padding: 0%;
 border-color: #ff5e00;
 background-color: #ffffff;
-height: 40vh;
+height: 28vh;
 font-size: 2px!important;
-justify-content: center;
-text-align: center;
-    position: sticky;
-  top: 0; /* albo np. 80px jeśli masz header */
+  top: 7vh; /* albo np. 80px jeśli masz header */
 }
 }
 .edukacjia-header2{
@@ -1831,6 +1856,13 @@ font-weight: 700;
 margin-bottom: 30px;
 padding: 2%;
 color: #000000;
+}
+@media (max-width: 768px){
+.edukacjia-header2{
+margin-bottom: 0px;
+font-size: 55px;
+padding: 0%;
+}
 }
 .text-p-edukacja2{
   width: 100%;

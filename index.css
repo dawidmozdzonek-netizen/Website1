@@ -161,7 +161,7 @@ STRONA OGULNE – CSS / NAWIGACJA MENU z x ponizej 768 (telefony tablety)
     color: #ffffff;
     z-index: 1100;
     width: 30px;
-    height: 22px;
+    height: 27px;
     text-align: left;
     font-size: 1px;
   }
@@ -201,7 +201,7 @@ efekt zminy burgera na x-a
 }
 
 .burger.open span:nth-child(1){
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(12px, 1px);
 }
 
 .burger.open span:nth-child(2){
@@ -209,7 +209,7 @@ efekt zminy burgera na x-a
 }
 
 .burger.open span:nth-child(3){
-  transform: rotate(-45deg) translate(7px, -7px);
+  transform: rotate(-45deg) translate(13px, -6px);
 }
 /* ==========================================
 zmniejszenie paska navigacji przy scrollowaniu patrz js 

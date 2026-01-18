@@ -1654,7 +1654,6 @@ align-content: center;
   color: #063014;
 }
 .kontynet{
-  color: #ffffff; 
   position: relative;   /* 🔥 potrzebne */
   overflow: hidden;     /* nic nie wyłazi */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

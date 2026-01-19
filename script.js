@@ -61,23 +61,35 @@ document.getElementById('footer-placeholder').innerHTML = `
     </footer>
 `;
 
-  const toggleBtn = document.getElementById("toggle-theme");
+const toggleBtn = document.getElementById("toggle-theme");
 
-toggleBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark-theme");
-  
-  // opcjonalnie zapis w localStorage, żeby pamiętało wybór
-  if(document.body.classList.contains("dark-theme")) {
+// Funkcja ustawiająca motyw
+function setTheme(dark) {
+  if(dark) {
+    document.body.classList.add("dark-theme");
     localStorage.setItem("theme", "dark");
   } else {
+    document.body.classList.remove("dark-theme");
     localStorage.setItem("theme", "light");
+  }
+}
+
+// Obsługa kliknięcia przycisku
+toggleBtn.addEventListener("click", () => {
+  const darkMode = !document.body.classList.contains("dark-theme");
+  setTheme(darkMode);
+});
+
+// Przy ładowaniu strony – ustawiamy motyw z localStorage
+document.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme");
+  if(savedTheme === "dark") {
+    setTheme(true);
+  } else {
+    setTheme(false);
   }
 });
 
-// przy ładowaniu strony – sprawdzamy lokalne ustawienie
-if(localStorage.getItem("theme") === "dark") {
-  document.body.classList.add("dark-theme");
-}
 
 /* =====================================================================
   pojawianie reponsywnego menu 

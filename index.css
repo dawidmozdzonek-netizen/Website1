@@ -369,7 +369,7 @@ width: 100%;
 @media (max-width: 768px){
 .naglowek{
 height: 50svh;
-
+margin-bottom: 14rem;
 
 }
 }
@@ -720,8 +720,7 @@ h2::after{
 }
 @media (max-width: 768px) {
 h2::after{
-  width:90%;  
-  margin-left: -70%; 
+  display: none;
  }
 }
 h2::after::after{
@@ -1428,7 +1427,10 @@ transition: background-size 0.7s ease-in-out;
 
 @media (max-width: 468px) {
   .kontynet{
+      aspect-ratio: auto;
+    font-size: 30px;
     min-width: 100%;
+    height: auto;
   }
 }
 .kontynet:hover{

@@ -357,7 +357,7 @@ STRONA 1 – CSS / dałem znacznie mniejsze padingi na mobilki
 STRONA 1 – CSS / NAGŁÓWEK
 ========================================== */
 .naglowek{
-background-image: url(/Users/dawid/Desktop/Github/zd_daw/naj-gal-2-copa.jpg);
+background-image: url(./zd_daw/do_nowej_szare.jpg);
 position: relative;
 z-index: 1; 
 background-repeat: no-repeat;

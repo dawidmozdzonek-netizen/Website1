@@ -745,19 +745,23 @@ font-style: normal;
 @media (max-width: 768px) {
 h3{
   padding-top: 25%;
+  text-align: center;
 }
 }
 @media (max-width: 768px) {
   h1{
+  text-align: center!important;
   font-size: clamp(1rem, 14vw, 8rem);
   text-align: left;
-  padding-left: 5vw;
+  padding-left: 0vw;
   padding-top: 2vh;
   }
 }
 @media (max-width: 768px) {
   h2{
   font-size: clamp(1rem, 14vw, 8rem);
+  text-align: center;
+  padding: 0;
   }
 }
 .dc{

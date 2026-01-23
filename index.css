@@ -241,15 +241,13 @@ body.dark-theme .a0{
 }
 .a0:hover{
   width: 100%; 
-  color: #4c4c4c;
+  color: #89916d;
 }
 .a0.active{
   width: 100%; 
-  color: #ff5e00;
+  color: var(--oliwka)
 }
-body.dark-theme .a0.active{
-  color: #ff5e00;
-}
+
 .a0.active::after{
   width: 100%; 
   color: #002dbf;
@@ -369,7 +367,7 @@ width: 100%;
 @media (max-width: 768px){
 .naglowek{
 height: 50svh;
-margin-bottom: 14rem;
+margin-bottom: 5rem;
 
 }
 }
@@ -1639,7 +1637,26 @@ justify-content: space-between;
       z-index: -2;
 }
 }
+.ikonki-tylko-tel{
+  display: none;
+}
 
+@media (max-width: 768px){
+.ikonki-tylko-tel{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  gap: 2rem;
+  margin-bottom: 9rem;
+
+}
+}
+
+.pop{
+  font-family: cursive;
+  align-content: center;
+  font-size:1.3rem;
+}
 
 .sas{
   color: #ffffff;
@@ -1680,5 +1697,6 @@ body.dark-theme {
   --card-bg: rgba(0,0,0,0.5);
   --modal-bg: rgba(0,0,0,0.9);    
   --x-menu:  rgba(33, 33, 33, 0.82);
+  --oliwka:  #7b8264;
 }
 

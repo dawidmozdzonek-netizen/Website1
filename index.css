@@ -761,7 +761,7 @@ h3{
 }
 @media (max-width: 768px) {
   h2{
-  font-size: clamp(1rem, 14vw, 8rem);
+  font-size: clamp(1rem, 19vw, 8rem);
   text-align: center;
   padding: 0;
   }

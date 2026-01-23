@@ -491,9 +491,9 @@ text-align: right;
     padding: 2%;
 }
 .ramka{
-border: solid 1px;
+border: solid 0px;
 padding: 2%;
-border-color: #ff5e00;
+border-color: var(--accent);
 background-color: #ffffff00;
 height: 100%;
 }
@@ -718,6 +718,12 @@ h2::after{
     margin-top: 2px; 
     margin-left: -50%;
 }
+@media (max-width: 768px) {
+h2::after{
+  width:90%;  
+  margin-left: -70%; 
+ }
+}
 h2::after::after{
   content: "";
   position: absolute;           /* start w środku */
@@ -744,7 +750,7 @@ font-style: normal;
 
 @media (max-width: 768px) {
 h3{
-  padding-top: 25%;
+  padding-top: 50%;
   text-align: center;
 }
 }
@@ -1385,6 +1391,7 @@ width: 100%;
   }
 }
 .okontyntenty{
+
 display: flex;
 flex-wrap: wrap;
 gap: 0px;
@@ -1401,7 +1408,8 @@ align-content: center;
   color: #063014;
 }
 .kontynet{
-  color: white;
+  color: rgb(0, 0, 0);
+  background: linear-gradient(to top, #f6f6f6, #f8f8f8);
   position: relative;   /* 🔥 potrzebne */
   overflow: hidden;     /* nic nie wyłazi */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -1428,36 +1436,28 @@ transition: background-size 0.7s ease-in-out;
 }
 
 .ameryka{
-  background-color: #e7e7e7;
-    background-image: url(./zd_daw/pexels-camcasey-1334607.jpg);
+
 }
 .afryka{
-    background-color: #e7e7e7;
-  background-image: url(./zd_daw/pexels-the-trvlr-1731660.jpg);
 }
 .europa{
-  background-color: #e7e7e7;
-    background-image: url(./zd_daw/pexels-dev-gandhi-830996-35535222.jpg);
 
 }
 .azja{
-  background-color: #e7e7e7;
-    background-image: url(./zd_daw/pexels-javon-swaby-197616-2797526.jpg);
 }
 .ul-kraje{
   position: relative;
   bottom: 0;
   left: 0;
-  color: #d24d00;
+  color: #ffffff;
 
   width: 100%;     
 max-height: 90%;/* 🔥 nie może zająć więcej niż połowę kafelka */
   overflow-y: auto;        /* jak za dużo krajów – scroll */
-
   margin: 0;
   padding: 8px;
 
-  background-color: #00000081;
+  background-color: #6B705C;
 
   font-size: clamp(10px, 1.2vw, 14px);  /* 🔥 skaluje się z ekranem */
 }
@@ -1660,7 +1660,7 @@ justify-content: space-between;
   --bg-secondary: #f5f5f5;
   --text: #272727;
   --text-secondary: #575757;
-  --accent: #ff5e00;
+  --accent: #ff5e0000;
   --nav-bg: rgb(255, 255, 255);
   --card-bg: #ffffff;
   --modal-bg: #ffffff;
@@ -1674,7 +1674,7 @@ body.dark-theme {
   --bg-secondary: #1e1e1e;
   --text: #f5f5f5;
   --text-secondary: #b5b5b5;
-  --accent: #ff5e00;
+  --accent: #ff5e0000;
   --nav-bg: rgba(0, 0, 0, 0.95);
   --card-bg: rgba(0,0,0,0.5);
   --modal-bg: rgba(0,0,0,0.9);    

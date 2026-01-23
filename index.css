@@ -741,7 +741,7 @@ padding-left: 5vw;
 text-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 font-family: "Yeseva One", serif;
 font-weight: 400;
-color: #000000;
+color: #4b4b4b;
 font-style: normal;
 }
 
@@ -1654,9 +1654,11 @@ justify-content: space-between;
 
 .pop{
   font-family: cursive;
-  font-size:1.3rem;
+  font-size:1.5rem;
 }
-
+.obdyp{
+  background-color: #616558a4;
+}
 .sas{
   color: #ffffff;
   font-size: clamp(10px, 4.2vw, 20px);

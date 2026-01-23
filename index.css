@@ -1451,7 +1451,7 @@ transition: background-size 0.7s ease-in-out;
   position: relative;
   bottom: 0;
   left: 0;
-  color: #ffffff;
+  color: #6B705C;
 
   width: 100%;     
 max-height: 90%;/* 🔥 nie może zająć więcej niż połowę kafelka */
@@ -1459,7 +1459,6 @@ max-height: 90%;/* 🔥 nie może zająć więcej niż połowę kafelka */
   margin: 0;
   padding: 8px;
 
-  background-color: #6B705C;
 
   font-size: clamp(10px, 1.2vw, 14px);  /* 🔥 skaluje się z ekranem */
 }
@@ -1484,7 +1483,7 @@ max-height: 90%;/* 🔥 nie może zająć więcej niż połowę kafelka */
   justify-items: center;
   align-items: center;
   align-content: center;
-  color: #ff5e00;
+  color: var(--oliwka);
   background-color: #0000002d;
   border-radius: 50%;
 }

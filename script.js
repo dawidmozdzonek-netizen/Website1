@@ -43,7 +43,6 @@ document.getElementById('footer-placeholder').innerHTML = `
         </a>
         </div>
     </div>
-        <button id="toggle-theme">🌙 / ☀️</button>
     <div class="footer-links">
              <nav id="nav-footer" class="nav-footer">
                 <ul class="ulul-foter">
@@ -62,22 +61,29 @@ document.getElementById('footer-placeholder').innerHTML = `
 `;
 
 const toggleBtn = document.getElementById("toggle-theme");
-
+const contrastBtn = document.getElementById("wysoki-kontrast");
 // Funkcja ustawiająca motyw
-function setTheme(dark) {
-  if(dark) {
-    document.body.classList.add("dark-theme");
-    localStorage.setItem("theme", "dark");
-  } else {
-    document.body.classList.remove("dark-theme");
-    localStorage.setItem("theme", "light");
-  }
+function setDarkTheme(enabled) {
+  document.body.classList.toggle("dark-theme", enabled);
+  if (enabled) document.body.classList.remove("contrast");
+  localStorage.setItem("theme", enabled ? "dark" : "light");
+}
+
+function setContrastTheme(enabled) {
+  document.body.classList.toggle("contrast", enabled);
+  if (enabled) document.body.classList.remove("dark-theme");
+  localStorage.setItem("theme", enabled ? "contrast" : "light");
 }
 
 // Obsługa kliknięcia przycisku
 toggleBtn.addEventListener("click", () => {
-  const darkMode = !document.body.classList.contains("dark-theme");
-  setTheme(darkMode);
+  const isDark = !document.body.classList.contains("dark-theme");
+  setDarkTheme(isDark);
+});
+
+contrastBtn.addEventListener("click", () => {
+  const isContrast = !document.body.classList.contains("contrast");
+  setContrastTheme(isContrast);
 });
 
 // Przy ładowaniu strony – ustawiamy motyw z localStorage
@@ -326,6 +332,28 @@ menuBio.addEventListener("mouseleave", () => {
 });
 
 
+
+
+
+
+
+
+
+
+/* ======================================
+   MODAL – OTWIERANIE / ZAMYKANIE
+   ====================================== */
+const panel = document.getElementById('lista-inwalicka');
+const button = document.getElementById('inwalida-poz');
+
+button.addEventListener('click', () => {
+  panel.classList.toggle('poza-hiden');
+});
+
+
+
+
+
 console.log("Znalezione sekcje:", sections); 
 console.log("Mapa menu:", menuMap);
 
@@ -350,4 +378,3 @@ setTimeout(() => {
   loader.classList.add("hidden"); // 🔥 po 3 sekundach znika
   content.style.visibility = "visible"; // pokazujemy content
 }, LOADER_TIME);
-

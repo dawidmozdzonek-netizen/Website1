@@ -199,6 +199,9 @@ efekt zminy burgera na x-a
   border-radius: 2px;
   transition: 0.3s ease;
 }
+.burger:hover{
+  background-color: transparent;
+}
 body.dark-theme span{
 }
 .burger.open span:nth-child(1){

@@ -212,14 +212,37 @@ const banner = document.getElementById('cookie-banner');
 const accept = document.getElementById('accept');
 const reject = document.getElementById('reject');
 
-accept.addEventListener('click', () => {
-  localStorage.setItem('cookies', 'ok');
+function hideBanner() {
   banner.style.display = 'none';
+// To odblokuje scrollowanie całej strony:
+  document.body.style.overflow = 'auto';
+  document.getElementById('cookie-overlay').style.display = 'none';
+}
+
+// Akceptacja
+accept.addEventListener('click', () => {
+  localStorage.setItem('cookies', 'accepted');
+  hideBanner();
+  initTracking(); // funkcja uruchamiająca analitykę / reklamy
 });
 
+// Odrzucenie
 reject.addEventListener('click', () => {
-  window.location.replace('odmowa.html');
+  localStorage.setItem('cookies', 'rejected');
+  hideBanner();
+  // nic nie włączamy
 });
+
+// Przy starcie strony
+//document.addEventListener('DOMContentLoaded', () => {
+//  const status = localStorage.getItem('cookies');
+//  if(status === 'accepted') {
+//    hideBanner();
+//    initTracking();
+//  } else if(status === 'rejected') {
+//    hideBanner();
+//  }
+//});
 
 
 //wesprzuj
@@ -305,3 +328,26 @@ menuBio.addEventListener("mouseleave", () => {
 
 console.log("Znalezione sekcje:", sections); 
 console.log("Mapa menu:", menuMap);
+
+const LOADER_TIME = 1000;
+const FADE_TIME = 800; // MUSI = transition w CSS
+
+const loader = document.getElementById("loader");
+const content = document.getElementById("content");
+
+setTimeout(() => {
+  loader.classList.add("fade-out");
+  content.style.visibility = "visible";
+
+  setTimeout(() => {
+    loader.remove(); // 💀 pewne usunięcie
+  }, FADE_TIME);
+
+}, LOADER_TIME);
+
+
+setTimeout(() => {
+  loader.classList.add("hidden"); // 🔥 po 3 sekundach znika
+  content.style.visibility = "visible"; // pokazujemy content
+}, LOADER_TIME);
+

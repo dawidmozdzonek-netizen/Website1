@@ -51,7 +51,8 @@ STRONA OGULNE – CSS / NAWIGACJA MENU na mobilki
     height: 93vh !important;
 
     padding: 2rem;
-    background-color: var(--bg-min-nav);
+    background-color: var(--mini-nav);
+  backdrop-filter: blur(10px);
     transform: translateX(-100%);
     transition: transform 0.3s ease;
     padding-bottom: 4rem;
@@ -199,7 +200,6 @@ efekt zminy burgera na x-a
   transition: 0.3s ease;
 }
 body.dark-theme span{
-  background-color:rgba(255, 255, 255, 0.82);
 }
 .burger.open span:nth-child(1){
   transform: rotate(45deg) translate(12px, 1px);
@@ -237,7 +237,7 @@ flex-wrap: nowrap;
 text-decoration: none;
 cursor: pointer;
 color: rgb(0, 0, 0);
-background-color: #0000001b;
+background-color: #a7a7a7c2;
 transition:0.3s;
 }
 body.dark-theme .a0{
@@ -260,7 +260,7 @@ body.dark-theme .a0{
 }
 .a0{
 position: relative;
-color: #000000;
+color: var(--nananana);
 padding-top: 3%;
 padding-bottom: 3px;
 font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -396,12 +396,9 @@ margin: 3%;
 margin-top: 2vh;
 display: flex;
 flex-wrap: wrap; 
-background-color:#f5f5f5;     /*background-color: #EBD5AB;*/
+background-color: var(--element-czesc-bg);    /*background-color: #EBD5AB;*/
 }
-body.dark-theme .section-dlaczego{
-background-color:#f5f5f500; 
-color: white;
-}
+
 
 /* ==========================================
 STRONA 1 – CSS /SEKCJIA DLCZEGO LEWA 
@@ -561,14 +558,12 @@ przeplatające sie z listą w pinie */
 
 .material-symbols-outlined{
 font-size: 30px;
-color: #063014;
 transition: background-color 0.6s ease, transform 0.3s ease;
 
 }
 
 
 .material-symbols-outlined:hover{
-transform: scale(1.2);
 }
 
 /* ==========================================
@@ -701,13 +696,11 @@ text-align: left;
 padding-left: 5vw;
 font-family: Montserrat, sans-serif !important;
 font-weight: 900;
-color: #313131;
+color: var(--bd-tytol-dawid);
 font-style: normal;
 background-color: #00000036;
 }
-body.dark-theme h2{
-  color: rgb(157, 157, 157);
-}
+
 h1{
   background-color: #00000064;
 
@@ -738,7 +731,7 @@ h3::after{
       margin-left: -50%;
 }
 @media (max-width: 768px) {
-h2::after{
+h3::after{
   display: none;
  }
 }
@@ -769,8 +762,9 @@ padding-bottom: 10%;
 
 @media (max-width: 768px) {
 h3{
-  padding-top: 50%;
-  text-align: center;
+    padding-top: 50%;
+    text-align: center;
+      top: 0;
 }
 }
 @media (max-width: 768px) {
@@ -1274,7 +1268,6 @@ padding: 1%;
 background-color:#000000c7;
 border-radius: 0.30rem;
 color: white;
-border: solid 1px #ffffff;
 font-weight: 750;
 transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -1299,7 +1292,7 @@ font-weight: 750;
 padding: 1%;
 background-color:#ffffffc7;
 border-radius: 0.30rem;
-border: solid 1px #ff0000;
+border: solid 1px #000000;
 transition: background-color 0.3s ease, color 0.3s ease;
 color: red;
 }
@@ -1715,8 +1708,7 @@ justify-content: space-between;
 
 .pop{
   padding: 1%;
-  border-radius: 24px;
-    background-color: #000000e0;
+  background-color: #6b705c93;
   font-family: cursive;
   font-size:1rem;
 }
@@ -1726,6 +1718,7 @@ justify-content: space-between;
 .sas{
   color: #ffffff;
   font-size: clamp(10px, 4.2vw, 20px);
+  background-color: transparent !important;
 }
 
 .sas:hover{
@@ -1737,8 +1730,11 @@ justify-content: space-between;
 }
 
 :root {
+  --element-czesc-bg: #f5f5f5;
+  --bd-tytol-dawid: #313131;
   --bg-min-nav: #ffffff;
   --przezroczyste-nav: #ffffff00;
+  --mini-nav: rgba(235, 235, 235, 0.82);
   --bg: #ffffff;
   --bg-secondary: #f5f5f5;
   --text: #272727;
@@ -1749,9 +1745,13 @@ justify-content: space-between;
   --modal-bg: #ffffff;
   --x-menu: rgba(255, 255, 255, 0.544);
   --oliwka:  #6B705C;
+  --nananana:  #000000;
 }
 
 body.dark-theme {
+  --element-czesc-bg: #000000;
+  --bd-tytol-dawid: #1c1c1c;
+    --mini-nav: rgba(22, 22, 22, 0.82);
   --bg-min-nav: #0b0b0b;
   --bg: #000000;
   --bg-secondary: #1e1e1e;
@@ -1765,6 +1765,24 @@ body.dark-theme {
   --oliwka:  #7b8264;
 }
 
+
+body.contrast {
+  --element-czesc-bg: #000000;
+  --bd-tytol-dawid: rgb(255, 145, 0);
+  --mini-nav: rgb(0, 0, 0);
+  --bg-min-nav: #0b0b0b;
+  --bg: #000000;
+  --bg-secondary: #cfff0f;
+  --text: #ffee00;
+  --text-secondary: #ffdd00;
+  --accent: #ffdd00;
+  --nav-bg: #ffdd00; 
+  --card-bg: #ffdd00; 
+  --modal-bg: #ffdd00;    
+  --x-menu:  rgb(255, 251, 0);
+  --oliwka:  #ff0000;
+  --oliwka:  #7rgb(0, 255, 21)
+}
 #loader{
   position: fixed;
   inset: 0;
@@ -1829,7 +1847,7 @@ background-color: transparent;
 
 }
 .prh2{
-color: #282828;
+color: var(--bd-tytol-dawid);
 line-height: 4rem;
 text-align: left;
 font-size: medium;
@@ -1864,7 +1882,55 @@ padding: 8%;
   list-style: none;
 }
 .a1{
-  list-style: none;
-  text-decoration: none;
-  list-style: none;
+  color: #000000;
+}
+
+
+.inwalida{
+  position: fixed;
+  background-color:#000000;
+
+  right: 0;
+align-content: center;
+text-align: center;
+  bottom: 0;
+  z-index: 1;
+  margin-bottom: 4rem;
+}
+
+.inwalidaa{
+ color: #000000;
+background-color: transparent !important;
+}
+
+.inwalida-poz{
+    width: 3rem;
+  height: 3rem;
+    background-color: #9cc328;
+  backdrop-filter: blur(5px);
+  align-content: center;
+}
+.inwalida-poz:hover{
+background-color: #9cc328;
+color: white;
+}
+.poza{
+    position: relative;
+  right: 0;
+align-content: center;
+text-align: center;
+  bottom: 0;
+  z-index: 1;
+  width: 3rem;
+  height: 3rem;
+    background-color:rgba(235, 235, 235, 0.897);
+  backdrop-filter: blur(5px);
+}
+
+.poza-hiden{
+display: none;
+}
+button:hover{
+background-color: #9cc328;
+color: white;
 }

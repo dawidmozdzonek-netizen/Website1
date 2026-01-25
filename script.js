@@ -86,7 +86,7 @@ contrastBtn.addEventListener("click", () => {
   setContrastTheme(isContrast);
 });
 
-// Przy ładowaniu strony – ustawiamy motyw z localStorage
+/* Przy ładowaniu strony – ustawiamy motyw z localStorage
 document.addEventListener("DOMContentLoaded", () => {
   const savedTheme = localStorage.getItem("theme");
   if(savedTheme === "dark") {
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     setTheme(false);
   }
-});
+});*/
 
 
 /* =====================================================================
@@ -349,6 +349,15 @@ const button = document.getElementById('inwalida-poz');
 button.addEventListener('click', () => {
   panel.classList.toggle('poza-hiden');
 });
+
+
+
+const bg = document.querySelector(".parallax-bg");
+const paralax = document.getElementById("naglowek");
+window.addEventListener("scroll", function(){
+  let offset = window.pageYOffset;
+bg.style.transform = `translateY(${offset * 0.3}px)`;
+})
 
 
 

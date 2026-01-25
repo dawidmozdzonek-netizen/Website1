@@ -233,7 +233,7 @@ flex-wrap: nowrap;
 @media (max-width: 768px){
   .ulul{
   font-size: 20px;
-  text-align: center;
+  align-items: center;
   }
 }
 .a0{
@@ -242,6 +242,11 @@ cursor: pointer;
 color: rgb(0, 0, 0);
 background-color: #a7a7a7c2;
 transition:0.3s;
+}
+@media (max-width: 768px){
+  .a0{
+  background-color: transparent;
+  }
 }
 body.dark-theme .a0{
   color: white;
@@ -696,6 +701,7 @@ STRONA 2 – CSS
 h2{
 font-size: clamp(1rem, 13vw, 12rem);
 text-align: left;
+  backdrop-filter: blur(2px);
 padding-left: 5vw;
 font-family: Montserrat, sans-serif !important;
 font-weight: 900;
@@ -706,14 +712,14 @@ background-color: #00000036;
 
 h1{
   background-color: #00000064;
-
+  backdrop-filter: blur(2px);
 line-height: 1;
 font-size: clamp(1rem, 13vw, 12rem);
 text-align: left;
 padding-left: 5vw;
 max-width: 14ch;
 font-family: Montserrat, sans-serif !important;
-font-weight: 900;
+font-weight: 400;
 font-style: normal;
 color: #a5d024;
 /*#d2ff4c #9cc328 6B705C b7e922*/
@@ -765,9 +771,11 @@ padding-bottom: 10%;
 
 @media (max-width: 768px) {
 h3{
-    padding-top: 50%;
+    padding-top: 35%;
+    padding-bottom:25%;
     text-align: center;
       top: 0;
+
 }
 }
 @media (max-width: 768px) {
@@ -1342,17 +1350,30 @@ button {
   color: var(--text);
   padding: 3%;
   display: flex;
+    background-image: linear-gradient(
+    rgba(13, 255, 0, 0.407), 
+    rgba(0, 0, 0, 0.401), 
+    rgba(85, 255, 0, 0.372)), url(./zd_daw/naj-gal-2.jpg); 
+    background-attachment: fixed; /* <== kluczowy */
     align-items: center;
   flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {
 .edukacjia{
-
   padding: 0;
 
 }
 }
+@media (max-width: 768px) {
+.adadad{
+
+  display: none;
+
+}
+}
+
+
 body.dark-theme .edukacjia-header{
   background-color: #000000;
   color: white;
@@ -1365,7 +1386,9 @@ body.dark-theme .edukacjia-header{
 
 @media (max-width: 768px) {
   .text-edukacjia{
-    background-color: #ffffff00;
+    backdrop-filter: blur(1px);
+
+    background-color: #ffffff5d;
     width: 100%;
   }
 }
@@ -1381,7 +1404,8 @@ body.dark-theme .edukacjia-header{
 }
 @media (max-width: 768px) {
 .obraz-edukacjia{
-  width: 100%;
+    display: none;
+
 
 }
 }
@@ -1402,12 +1426,12 @@ color: var(--text);
 @media (max-width: 768px) {
   .edukacjia-header{
   font-size: 40px;
-  font-weight: 500;
+  font-weight: 900;
+  color: white;
   }
 }
 .text-p-edukacja{
-  width: 100%;
-  font-size: 22px;
+  color: black;
   padding: 2%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -1840,6 +1864,7 @@ body.contrast {
 
 
 .prh1{
+
 text-align: left!important;
 max-width: 88ch;
 margin-top: 6rem;
@@ -1937,3 +1962,4 @@ button:hover{
 background-color: #9cc328;
 color: white;
 }
+

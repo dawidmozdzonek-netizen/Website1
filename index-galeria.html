@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="anna.css">
+    <title>Anna Możdżonek</title>
+    <link rel="icon" type="image/png" href="./anna-zdjecia/IMG_20241106_060751.jpg">
+</head>
+<body>
+<div id="loader">
+  <div class="spinner"></div>
+  <div class="spinner ring-dwa"></div>
+<div class="spinner ring-trzy"></div>
+</div>
+    <section>
+        <header>
+            <div class="X-menu"><a class="dolacz-do-nas-nax" href="index.html#o-mnie"><img src="./anna-zdjecia/copy.png" class="loggo"> </a><button class="burger" aria-label="Menu"><span></span><span class="SPAN-INNY"></span><span></span></button></div><div id="overlay"></div>
+             <nav id="nav-header" class="nav">
+                <div class="anna">Annia Możdżonek</div>
+                    <div class="lang-switcher">
+                        <button class="button-language" id="btn-pl" onclick="showLang('pl', this)">PL</button>
+                        <button class="button-language" onclick="showLang('en', this)">EN</button>
+                    </div>
+                <ul class="ulul">
+                    <li><a class="a0" href="index.html#naglowek">G Ł Ó W N A</a></li>
+                    <li><a class="a0" href="index.html#o-mnie">O M N I E</a></li>
+                    <li><a class="a0" href="index.html#umie">B I O G R A F I A ˅</a>
+                        <ul class="lista" id="lista">
+                            <li class="li-lista"><a class="li-lista" href="index.html#mapa">M A P A</a></li>
+                            <li class="li-lista"><a class="li-lista" href="index.html#wycieczekii">P O D R Ó Ż E</a></li>
+                            <li class="li-lista"><a class="li-lista" href="index-galeria.html">G A L E R I A </a></li>
+                        </ul>
+                    </li>
+                    </li>
+                </ul>
+                <aside class="anno">
+                    <a class="dolacz-do-nas" href="kontakt-anna.html">K O N T A K T</a>
+                </aside>
+            </nav>
+        </header>
+        </section>
+    <main class="mam-main">
+        <section> 
+<button id="openGallery" class="btn-">Zobacz zdjęcia</button>
+
+<!-- Kontener galerii -->
+<!-- Galeria miniatur pozioma -->
+<div class="carousel-container">
+  <div class="carousel">
+    <img src="anna-zdjecia/IMG_20241106_060751.jpg" class="thumb" alt="Opis 1">
+    <img src="anna-zdjecia/IMG_20241106_171332.jpg" class="thumb" alt="Opis 2">
+    <img src="anna-zdjecia/IMG_20241109_171143.jpg" class="thumb" alt="Opis 3">
+    <img src="anna-zdjecia/IMG_20241103_070454.jpg" class="thumb" alt="Opis 4">
+    <img src="anna-zdjecia/IMG_20251015_182155.jpg" class="thumb" alt="Opis 1">
+    <img src="anna-zdjecia/IMG_20241107_062638.jpg" class="thumb" alt="Opis 2">
+    <img src="anna-zdjecia/IMG_20241109_100519.jpg" class="thumb" alt="Opis 3">
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <img id="lightbox-img" src="" alt="">
+</div>
+        </section>
+        <div class="inwalida">
+        <div class="lista-inwalicka" id="lista-inwalicka">
+            <div class="do-ukrycia">
+                <div class="poza wysoki-kontrast"><button id="wysoki-kontrast"><span class="material-symbols-outlined">contrast</span></button></div></div>          
+                <div class="poza tryb-ciemny"><button id="toggle-theme"><span class="material-symbols-outlined inwalidaa">dark_mode</span></button></div>
+            </div>
+            <div class="inwalida-poz" id="inwalida-poz"><span class="material-symbols-outlined inwalidaa">accessible_forward</span></div>
+        </div>
+        </div>
+        </div>
+        <div id="cookie-overlay"></div>
+        <div id="cookie-banner">
+            <p class="p-coo">Strona może przetwarzać podstawowe dane techniczne użytkownika, takie jak adres IP lub informacje o przeglądarce, wyłącznie w celu prawidłowego działania i wyświetlania treści. Odmowa ich przetwarzania może wpłynąć na dostępność niektórych funkcji strony.
+         <a class="a1" href="polityka-prywatnosci.html">polityka-prywatnosci</a></p>
+        <button id="accept" class="accept">Akceptuję</button>
+        <button id="reject" class="delete">Odrzucam</button>
+        </div>
+    </main>
+        <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-col">
+            <h3>Anna</h3>
+            <p>Przewodniczka sudecka<br>Pilotka wycieczek</p>
+            </div>
+
+            <div class="footer-col">
+            <h4>Nawigacja</h4>
+            <ul>
+                <li><a href="#naglowek">Główna</a></li>
+                <li><a href="#o-mnie">O mnie</a></li>
+                <li><a href="#">Wycieczki</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+            </div>
+
+            <div class="footer-col">
+            <h4>Kontakt</h4>
+            <p>Email: kontakt@email.pl</p>
+            <p>Tel: 000 000 000</p>
+            <a class="dolacz-do-nas-footer" href="kontakt-anna.html">K O N T A K T</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Wszystkie prawa zastrzeżone
+        </div>
+        </footer>
+        <div id="footer-placeholder"></div>
+    <script src="anna.js"></script>
+    <script src="anna-galeria.js"></script>
+</body>
+</html>
+
